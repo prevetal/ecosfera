@@ -309,5 +309,38 @@
 				<button class="more_btn">Показать ещё</button>
 			</div>
 		</section>
+
+
+		<section class="cookie_modal">
+			<div class="info">
+				<div>Сайл использует cookies</div>
+
+				<div><a href="/">Узнать подробнее</a></div>
+			</div>
+
+			<button class="btn">Понятно</button>
+		</section>
+
+
+		<!-- Connecting javascript files -->
+		<script src="js/jquery-3.6.3.min.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const cookieStorage = localStorage.getItem('cookie')
+
+				if (cookieStorage === null || cookieStorage === 'true') {
+					$('.cookie_modal').addClass('show')
+				}
+
+				$('.cookie_modal .btn').click(function(e) {
+					e.preventDefault()
+
+					$('.cookie_modal').hide()
+
+					localStorage.setItem('cookie', false)
+				})
+			})
+		</script>
 	</body>
 </html>
