@@ -516,11 +516,19 @@
     line-height: 145%;
 
     cursor: pointer;
+    transition: .2s linear;
     text-transform: uppercase;
 
     color: #444;
     border: none;
     background: #ffd600;
+}
+
+
+.cookie_modal .btn:hover
+{
+    color: #000;
+    background: #ffdf36;
 }
 
 
